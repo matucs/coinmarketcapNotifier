@@ -1,6 +1,14 @@
 import * as cheerio  from "cheerio";
 import {getRecentListed} from "./coinMarketCapScammer.js";
 import {sendMesage} from "./telegramNotifier.js";
+import express from "express";
+
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.listen( port ,()=>{
+  console.log('server is running at port number 3000')
+});
 
 const chatIds = ["102455115", "98076110"];
 
@@ -26,4 +34,4 @@ const chatIds = ["102455115", "98076110"];
 
  
     console.log(result);
-  }, 5000);
+  }, 20000);
