@@ -10,7 +10,7 @@ const chatIds = ["102455115", "98076110"];
         const recentlyAddedTokens = [];
         let topCoin = $(".kKpPOn")[0].children[0].data;
 
-        if (topCoin === $(".kKpPOn")[0].children[0].data) {
+        if (topCoin !== $(".kKpPOn")[0].children[0].data) {
              chatIds.forEach((id) => {
                 const message = $(".kKpPOn")[0].children[0].data;
                 sendMesage(id, message);
