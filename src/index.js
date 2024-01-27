@@ -2,8 +2,7 @@ import * as cheerio  from "cheerio";
 import {getRecentListed} from "./coinMarketCapScammer.js";
 import {sendMesage} from "./telegramNotifier.js";
 
-// "98076110"
-const chatIds = ["102455115"];
+const chatIds = ["102455115", "98076110"];
 
   setInterval(() => {
     const result = getRecentListed().then((response) => {
@@ -27,4 +26,4 @@ const chatIds = ["102455115"];
 
  
     console.log(result);
-  }, 5000);
+  }, 20000);
